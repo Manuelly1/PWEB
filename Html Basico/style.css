@@ -54,12 +54,6 @@ caption{
     color: white;
 }
 
-div #containerlink{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 div #containerlinks{
     background-color: rgb(78, 28, 16);
     padding-bottom: 25px;
@@ -68,7 +62,7 @@ div #containerlinks{
     padding-top: 55%;
 }
 
-div #container_links > p{
+div #containerLinks > p{
     color: rgb(200, 28, 28);
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;

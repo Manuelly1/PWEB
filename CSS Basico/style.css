@@ -28,16 +28,13 @@ div #containerAutor{
     padding: 10px;
 }
 
-div #containerlinks{
-    background-color: rgb(242, 19, 19);
-    padding-bottom: 25px;
-    border-radius: 10px;
-    width: 700px;
-    padding-top: 55%;
+div #containerLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .buttonLink{
-    margin-right: 50px;
     padding: 5px;
     background-color: white;
     color: black;

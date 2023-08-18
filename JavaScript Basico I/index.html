@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>   
+   <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="style.css">      
+   </head>
+   <body>
+        <div id="meuAmor"></div> 
+        <div id="meuAmor1">
+            <button id="botaoCarregar">
+                Carregando cervejas...
+            </button>
+        </div>              
+   </body>   
+   <script>
+        let estado = true;
+
+        function carregarDiv(){
+            let div = document.getElementById("meuAmor");
+            if(!estado) {
+                div.innerHTML = '';
+            }
+            else {
+                div.innerHTML = `<h1>Guinness</h1>`
+            }
+            div.classList.toggle("exibir");
+            estado = !estado;
+        }
+
+        let botao = document.getElementById("botaoCarregar");
+        botao.addEventListener("click", carregarDiv);                 
+   </script>
+</html>

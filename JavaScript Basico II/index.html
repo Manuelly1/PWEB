@@ -33,16 +33,17 @@
       }
 
       let botaoOrdenar = document.getElementById("botaoOrdenar");
-      
+
       botaoOrdenar.addEventListener("click", function() {
          cervejas.sort(); // Ordena o array em ordem alfabética crescente
          carregarDiv(); // Atualiza a exibição das cervejas na página
       });
 
       let botaoEmbaralhar = document.getElementById("botaoEmbaralhar");
+
       botaoEmbaralhar.addEventListener("click", function() {
-         shuffle(cervejas); // Embaralha o array
-         carregarDiv(); // Atualiza a exibição das cervejas na página
+         shuffle(cervejas); 
+         carregarDiv(); 
       });
    </script>
 </html>

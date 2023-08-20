@@ -10,6 +10,7 @@
         <div id="meuAmor"></div>
         <br><br>
         <div id="containerBotoes">
+            <a href="#" id="botaoCarregar" class="botao">Carregar livros</a>
             <a href="#" id="botaoOrdenar" class="botao">Ordenar livros</a>
             <a href="#" id="botaoEmbaralhar" class="botao">Embaralhar livros</a>
         </div>
@@ -33,6 +34,9 @@
                 [array[i], array[j]] = [array[j], array[i]];
             }
         }
+        
+        const botaoCarregar = document.getElementById("botaoCarregar");
+        botaoCarregar.addEventListener("click", () => carregarDiv(livros));
 
         let botaoOrdenar = document.getElementById("botaoOrdenar");
 

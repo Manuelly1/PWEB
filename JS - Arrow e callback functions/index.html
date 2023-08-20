@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title>JS - Arrow e Callback Functions</title>
+    </head>
+    <body>
+        <div id="meuAmor"></div>
+        <br><br>
+        <div id="containerBotoes">
+            <a href="#" id="botaoOrdenar" class="botao">Ordenar livros</a>
+            <a href="#" id="botaoEmbaralhar" class="botao">Embaralhar livros</a>
+        </div>
+    </body>
+    <script>
+        let livros = ["Um eco na escuridão", "A seleção", "Felizes para sempre", "Anne de Green Gables", "Poliana", "O amante da duquesa"];
+
+        const transformar = (livro) => {
+            return `<div class="livro">${livro}</div>`;
+        }
+
+        const carregarDiv = (livros) => {
+            const div = document.getElementById("meuAmor");
+            const livrosHtml = livros.map(livro => transformar(livro));
+            div.innerHTML = `${livrosHtml.join("\n")}`;
+        };
+
+        const shuffle = (array) => {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        let botaoOrdenar = document.getElementById("botaoOrdenar");
+
+        botaoOrdenar.addEventListener("click", function () {
+            const ordenarLivros = [...livros].sort();
+            carregarDiv(ordenarLivros);
+        });
+
+        let botaoEmbaralhar = document.getElementById("botaoEmbaralhar");
+
+        botaoEmbaralhar.addEventListener("click", function () {
+            const embaralharLivros = [...livros];
+            shuffle(embaralharLivros);
+            carregarDiv(embaralharLivros);
+        });
+    </script>
+</html>

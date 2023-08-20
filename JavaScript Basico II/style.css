@@ -32,6 +32,19 @@ body{
     background-color: #d7a40b;
 } 
 
+#botaoCarregar{
+    background-color: #d7a40b;
+}
+ 
+#botaoCarregar:hover{
+    background-color: #8d0606;
+    color: white;
+}
+ 
+#botaoCarregar:active{
+    background-color: #d7a40b;
+}
+ 
 #botaoOrdenar{
     background-color: #d7a40b;
 }

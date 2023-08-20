@@ -7,6 +7,7 @@
    </head>
    <body>
       <div id="meuAmor"></div>  
+      <button id="botaoCarregar">Carregar cervejas</button>
       <button id="botaoOrdenar">Ordenar cervejas</button>
       <button id="botaoEmbaralhar">Embaralhar cervejas</button>
                 
@@ -31,6 +32,9 @@
             [array[i], array[j]] = [array[j], array[i]];
          }
       }
+
+      let botaoCarregar = document.getElementById("botaoCarregar");
+      botaoCarregar.addEventListener("click", carregarDiv);
 
       let botaoOrdenar = document.getElementById("botaoOrdenar");
 

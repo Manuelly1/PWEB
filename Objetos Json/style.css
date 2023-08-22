@@ -1,0 +1,45 @@
+body{
+    background-color: #ceb2b2;
+}
+
+div, table{
+    margin: 0;
+    padding: 0;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th{
+    background-color: #f91098;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+tr{
+    border-bottom: 1px solid #ddd;
+}
+
+td{
+    padding: 10px;
+}
+
+#botaoCarregar{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #850585;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#botaoCarregar:hover{
+    background-color: #464a4d;
+}
+

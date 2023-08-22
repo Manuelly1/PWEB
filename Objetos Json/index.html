@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>   
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">      
+        <title>Objetos JSON</title>            
+    </head>
+    <body>
+        <div><button id="botaoCarregar">Carregando cervejas...</button></div>
+        <table id="cervejasDiv">
+            <thead>
+                <tr>
+                   <th>Nome</th>
+                   <th>Álcool</th>
+                   <th>Style</th>
+                   <th>IBU</th>
+                </tr>
+             </thead>
+             <tbody id="cervsTabela">
+             </tbody>
+        </table>
+    </body>   
+    <script>
+        let cervejas = [
+            {
+                name: "Guiness", 
+                alcohol: "10%",   
+                style: "APA",
+                IBU: "20"         
+            }, 
+            {
+                name: "Desperados",
+                alcohol: "6%",
+                style: "Pilsen",
+                IBU: "30"              
+            }, 
+            {
+                name: "Becks",
+                alcohol: "5%",
+                style: "Red Ale",
+                IBU: "40"              
+            },
+            {
+                name: "Stella Artois",
+                alcohol: "5%",
+                style: "Lager",
+                IBU: "25"              
+            },
+            {
+                name: "Heineken",
+                alcohol: "5%",
+                style: "Pilsner",
+                IBU: "22"              
+            },
+            {
+                name: "Chimay Blue",
+                alcohol: "9%",
+                style: "Trappist Ale",
+                IBU: "40"              
+            }
+        ];
+        //cs é um array de cervejas
+        const carregarDiv = (cs, targetId = "cervejasDiv") => {
+            const tableBody = document.getElementById(targetId);
+            const itensHtml = cs.map(item => `
+                <tr>
+                    <td>${item['name']}</td>
+                    <td>${item['alcohol']}</td>
+                    <td>${item['style']}</td>
+                    <td>${item['IBU']}</td>
+                </tr>`
+            );
+            tableBody.innerHTML = `${itensHtml.join("\n")}`;
+        };
+
+        const botao = document.getElementById("botaoCarregar");
+        botao.addEventListener("click", () => carregarDiv(cervejas, "cervsTabela"));
+    </script>
+</html>

@@ -9,16 +9,15 @@
     <body>
         <div><button id="botaoCarregar">Carregando cervejas...</button></div>
         <table id="cervejasDiv">
-            <thead>
+            <thead id="thead"> 
                 <tr>
-                   <th>Nome</th>
-                   <th>Álcool</th>
-                   <th>Style</th>
-                   <th>IBU</th>
+                    <th>Nome</th>
+                    <th>Álcool</th>
+                    <th>Style</th>
+                    <th>IBU</th>
                 </tr>
-             </thead>
-             <tbody id="cervsTabela">
-             </tbody>
+            </thead>
+            <tbody id="cervsTabela"></tbody>
         </table>
     </body>   
     <script>
@@ -27,50 +26,78 @@
                 name: "Guiness", 
                 alcohol: "10%",   
                 style: "APA",
-                IBU: "20"         
+                ibu: "20"         
             }, 
             {
                 name: "Desperados",
                 alcohol: "6%",
                 style: "Pilsen",
-                IBU: "30"              
+                ibu: "30"              
             }, 
             {
                 name: "Becks",
                 alcohol: "5%",
                 style: "Red Ale",
-                IBU: "40"              
+                ibu: "40"              
             },
             {
                 name: "Stella Artois",
                 alcohol: "5%",
                 style: "Lager",
-                IBU: "25"              
+                ibu: "25"              
             },
             {
                 name: "Heineken",
                 alcohol: "5%",
                 style: "Pilsner",
-                IBU: "22"              
+                ibu: "22"              
             },
             {
                 name: "Chimay Blue",
                 alcohol: "9%",
                 style: "Trappist Ale",
-                IBU: "40"              
+                ibu: "40"              
+            },
+            {
+                name: "Corona",
+                alcohol: "4.6%",
+                style: "Pale Lager",
+                ibu: "18"              
+            },
+            {
+                name: "Sierra Nevada Pale Ale",
+                alcohol: "5.6%",
+                style: "American Pale Ale",
+                ibu: "38"              
+            },
+            {
+                name: "Samuel Adams Boston Lager",
+                alcohol: "4.9%",
+                style: "Vienna Lager",
+                ibu: "30"              
+            },
+            {
+                name: "Grolsch Premium Lager",
+                alcohol: "5%",
+                style: "Euro Pale Lager",
+                ibu: "23"              
             }
         ];
         //cs é um array de cervejas
-        const carregarDiv = (cs, targetId = "cervejasDiv") => {
-            const tableBody = document.getElementById(targetId);
+        const carregarDiv = (cs, targetId = "cervejasDiv", lista = ["Nome", "Álcool", "Estilo", "Amargor"], lista1 = ["name", "alcohol", "style", "ibu"]) => {
+            const tableBody = document.getElementById(targetId); 
+            const thead = document.getElementById("thead"); 
+            thead.innerHTML = lista.map(header => `<th>${header}</th>`).join("");
+
             const itensHtml = cs.map(item => `
                 <tr>
                     <td>${item['name']}</td>
                     <td>${item['alcohol']}</td>
                     <td>${item['style']}</td>
-                    <td>${item['IBU']}</td>
+                    <td>${item['ibu']}</td>
                 </tr>`
             );
+
             tableBody.innerHTML = `${itensHtml.join("\n")}`;
         };
 

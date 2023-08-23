@@ -84,7 +84,7 @@
             }
         ];
         //cs é um array de cervejas
-        const carregarDiv = (cs, targetId = "cervejasDiv", lista = ["Nome", "Álcool", "Estilo", "Amargor"], lista1 = ["name", "alcohol", "style", "ibu"]) => {
+        const carregarDiv = (cs, targetId = "cervejasDiv", lista = ["Nome", "Álcool", "Estilo", "Amargor"]) => {
             const tableBody = document.getElementById(targetId); 
             const thead = document.getElementById("thead"); 
             thead.innerHTML = lista.map(header => `<th>${header}</th>`).join("");

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>ReactZero</title>
+      <link rel="stylesheet" href="style.css">      
+   </head>
+   <body>
+      <div id="app"></div>
+
+      <script src="libs/react.js"></script>
+      <script src="libs/react-dom.js"></script>
+
+      <script>
+         const createElement = React.createElement;
+
+         const th1 = createElement('th', null, 'Livro');
+         const th2 = createElement('th', null, 'Autor(a)');
+         const th3 = createElement('th', null, 'Ano de lançamento');
+
+         const tr1 = createElement('tr', null,
+            createElement('td', null, 'A seleção'),
+            createElement('td', null, 'Kiera Cass'),
+            createElement('td', null, '2012')
+         );
+
+         const tr2 = createElement('tr', null,
+            createElement('td', null, 'Felizes para sempre'),
+            createElement('td', null, 'Kiera Cass'),
+            createElement('td', null, '2014')
+         );
+
+         const tr3 = createElement('tr', null,
+            createElement('td', null, 'Um eco na escuridão'),
+            createElement('td', null, 'Francine Rivers'),
+            createElement('td', null, '1994')
+         );
+
+         const tr4 = createElement('tr', null,
+            createElement('td', null, 'Jogos Vorazes'),
+            createElement('td', null, 'Suzanne Collins'),
+            createElement('td', null, '2008')
+         );
+
+         const thead = createElement('thead', null,
+            createElement('tr', null, th1, th2, th3)
+         );
+
+         const tbody = createElement('tbody', null, tr1, tr2, tr3, tr4);
+         const table = createElement('table', null, thead, tbody);
+
+         ReactDOM.render(
+            table,
+            document.getElementById("app")
+         );
+      </script>
+
+   </body>
+</html>

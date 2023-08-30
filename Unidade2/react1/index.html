@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+    <title>React Um</title>      
+   </head>
+   <body>
+      <div id="app"></div>
+
+      <script src="libs/react.js"></script>
+      <script src="libs/react-dom.js"></script>
+      <script src="libs/babel.js"></script>
+
+        <script type="text/babel">
+            ReactDOM.render(
+                <div id="app">
+                <table id="tabela" border="1">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Marca</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Havana</td>
+                            <td>Engenho Anísio Santiago</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                ,
+                document.getElementById("app"))
+        </script>
+    </body>
+</html>

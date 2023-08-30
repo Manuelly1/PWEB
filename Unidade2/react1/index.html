@@ -2,36 +2,127 @@
 
 <html>
    <head>
-    <title>React Um</title>
-    <link rel="stylesheet" href="style.css">      
+        <title>React 1</title>
+        <link rel="stylesheet" href="style.css">      
    </head>
    <body>
-      <div id="app"></div>
+        <button id = "carregar">Carregar Filmes</button>
+        <div id="app"></div>
 
-      <script src="libs/react.js"></script>
-      <script src="libs/react-dom.js"></script>
-      <script src="libs/babel.js"></script>
+        <script src="libs/react.js"></script>
+        <script src="libs/react-dom.js"></script>
+        <script src="libs/babel.js"></script>
 
         <script type="text/babel">
-            ReactDOM.render(
-                <div id="app">
-                    <table id="tabela" border="1">
+
+            const filmes = [
+                {
+                    nome: "Diário de Uma Paixão",
+                    genero: "Romance",
+                    ano: 2004
+                },
+                {
+                    nome: "Jurassic Park",
+                    genero: "Ação",
+                    ano: 1993
+                },
+                {
+                    nome: "A Origem",
+                    genero: "Ficção Científica",
+                    ano: 2010
+                },
+                {
+                    nome: "A Redenção de Shawshank",
+                    genero: "Drama",
+                    ano: 1994
+                },
+                {
+                    nome: "Os Vingadores",
+                    genero: "Ação",
+                    ano: 2012
+                },
+                {
+                    nome: "Pulp Fiction",
+                    genero: "Crime",
+                    ano: 1994
+                },
+                {
+                    nome: "O Senhor dos Anéis: A Sociedade do Anel",
+                    genero: "Aventura",
+                    ano: 2001
+                },
+                {
+                    nome: "Procurando Nemo",
+                    genero: "Animação",
+                    ano: 2003
+                }
+            ];
+
+            var colunas = ["Nome", "Gênero", "Ano de lançamento"];
+
+            const Cabecalho = () => {
+                return (
+                    <h1>Minha Tabela de Filmes</h1>
+                )
+            }
+
+            const TabelaFilmesJson = () => {
+                return (
+                    <table id="table2">
                         <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>Marca</th>
+                            <tr id="cabecalho">
+                                {colunas.map((col) => (
+                                    <th>{col}</th>
+                                ))}
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Havana</td>
-                                <td>Engenho Anísio Santiago</td>
-                            </tr>
+                        <tbody id="tbody">
+                            {filmes.map((item, index) => (
+                                <tr>
+                                    <td>{item.nome}</td>
+                                    <td>{item.genero}</td>
+                                    <td>{item.ano}</td>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
-                </div>
-                ,
-                document.getElementById("app"));
+                )
+            }
+
+            const TabelaFilmes = () => {
+                return (
+                    <div id="app">
+                        <table id="table1">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Gênero</th>
+                                    <th>Ano de lançamento</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Diário de Uma Paixão</td>
+                                    <td>Romance</td>
+                                    <td>2004</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                )
+            }
+
+            const carregarDiv = () => {
+                ReactDOM.render(
+                    <div id = "teste">
+                        <Cabecalho />
+                        <TabelaFilmesJson />
+                        <TabelaFilmes />
+                    </div>,
+                    document.getElementById("app")
+                );
+            }
+            document.getElementById("carregar").addEventListener("click", carregarDiv);
         </script>
     </body>
 </html>

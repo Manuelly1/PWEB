@@ -2,7 +2,8 @@
 
 <html>
    <head>
-      <title>ReceitaReact - 2</title>      
+      <title>ReceitaReact - 2</title> 
+      <link rel="stylesheet" type="text/css" href="style.css">
    </head>
    <body>
       <div id="app"></div>
@@ -11,51 +12,52 @@
       <script src="libs/babel.js"></script>
       
       <script type="text/babel">
-         class TabelaBebidas extends React.Component{
-            render(){
+         function Rodape() {
+            return (
+               <footer className="rodape">
+                  <p>&copy; 2023 - Bebidas</p>
+               </footer>
+            );
+         }
+
+         function Botao(props) {
+            return <button id='botao' onClick={props.onClick}>{props.texto}</button>;
+         }
+
+         class TabelaBebidas extends React.Component {
+            render() {
                return (
                   <div>
+                     <h1 className="titulo">{this.props.titulo}</h1>
                      <table id="tabela" border="1">
                         <thead>
                            <tr>
                               <th>Nome</th>
                               <th>Marca</th>
+                              <th>IBU</th>
+                              <th>Teor alcoólico</th>
                            </tr>
                         </thead>
                         <tbody>
                            <tr>
                               <td>Havana</td>
                               <td>Engenho Anísio Santiago</td>
+                              <td>25</td>
+                              <td>5%</td>
                            </tr>
                         </tbody>
                      </table>
-                 </div> 
-               )
+                     <div className="botao-container">
+                        <Botao texto="Clique Aqui" onClick={() => alert('Ôpaa, está funcionando!')} />
+                     </div>
+                     <div className="rodape">
+                        <Rodape id='rodape' />
+                     </div>
+                  </div> 
+               );
             }
          }
-         const TabelaBebidas__ = () => {
-            return (
-               <div>
-                  <h1>Tabela de Bebidas</h1>
-                  <table id="tabela" border="1">
-                     <thead>
-                        <tr>
-                           <th>Nome</th>
-                           <th>Marca</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>Havana</td>
-                           <td>Engenho Anísio Santiago</td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-            )  
-         }
-         ReactDOM.render(
-            <TabelaBebidas/>,document.getElementById("app"))
+         ReactDOM.render(<TabelaBebidas titulo="Tabela de Bebidas" />, document.getElementById("app"));
 
       </script>
    </body>

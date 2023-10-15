@@ -1,125 +1,56 @@
 <!DOCTYPE html>
 
 <html>
-
    <head>
-
-      <title>ReceitaReact - 3</title>      
-
+      <title>ReceitaReact - 3</title> 
+      <link rel="stylesheet" type="text/css" href="style.css">    
    </head>
-
-
-
    <body>
+      <div id="app"></div>
 
-      <div id="app">
-
-      </div>
-
-
-
-      <script src="libs/react.js"/>
-
-
-
-      <script src="libs/react-dom.js"/>
-
-
-
-      <script src="libs/babel.js"/>
-
-
-
+      <script src="libs/react.js"></script>
+      <script src="libs/react-dom.js"></script>
+      <script src="libs/babel.js"></script>
       <script type="text/babel">
-
-                 
-
-         const TabelaBebidas = () => {
-
-
-
+         
+         const TabelaBebidas = ({ titulo, cabecalhos, conteudo }) => {
             return (
-
-
-
                <div>
-
-
-
-                  <h1>Tabela de Bebidas</h1>
-
-
-
+                  <h1>{titulo}</h1>
                   <table id="tabela" border="1">
-
-
-
                      <thead>
-
-
-
-                        <tr><th>Nome</th><th>Marca</th></tr>
-
-
-
+                        <tr>
+                           {cabecalhos.map((cabecalho, index) => (
+                              <th key={index}>{cabecalho}</th>
+                           ))}
+                        </tr>
                      </thead>
-
-
-
                      <tbody>
-
-
-
-                        <tr><td>Havana</td><td>Engenho Anísio Santiago</td></tr>
-
-
-
+                        {conteudo.map((linha, rowIndex) => (
+                           <tr key={rowIndex}>
+                              {linha.map((valor, cellIndex) => (
+                                 <td key={cellIndex}>{valor}</td>
+                              ))}
+                           </tr>
+                        ))}
                      </tbody>
-
-
-
                   </table>
-
-
-
                </div>
-
-
-
-            )  
-
-
-
+            )
          }
 
-
-
-         
-
-
+         const valoresCabecalhos = ["Nome", "Marca", "Ano"]
+         const valoresConteudo = [
+            ["Bebida 1", "Marca 1", "2022"],
+            ["Bebida 2", "Marca 2", "2021"],
+            ["Bebida 3", "Marca 3", "2023"]
+         ]
 
          ReactDOM.render(
-
-
-
-            <TabelaBebidas/>
-
-
-
-            ,
-
-
-
-            document.getElementById("app"))
-
-
+            <TabelaBebidas titulo="Minha tabela de cana" cabecalhos={valoresCabecalhos} conteudo={valoresConteudo} />,
+            document.getElementById("app")
+         )
 
       </script>
-
-
-
    </body>
-
-
-
 </html>

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
    <head>
       <title>ReceitaReact - 2</title> 
@@ -21,45 +20,59 @@
          }
 
          function Botao(props) {
-            return 
-               <button id='botao' onClick={props.onClick}>{props.texto}</button>;
+            return (
+               <button id='botao' onClick={props.onClick}>{props.texto}</button>
+            );
          }
 
          class TabelaBebidas extends React.Component {
+            constructor(props) {
+               super(props);
+               this.state = {
+                  tabelaVisivel: false,
+               };
+            }
+
+            exibirTabela() {
+               this.setState({ tabelaVisivel: true });
+            }
+
             render() {
                return (
                   <div>
                      <h1 className="titulo">{this.props.titulo}</h1>
-                     <table id="tabela" border="1">
-                        <thead>
-                           <tr>
-                              <th>Nome</th>
-                              <th>Marca</th>
-                              <th>IBU</th>
-                              <th>Teor alcoólico</th>
-                           </tr>
-                        </thead>
-                        <tbody>
-                           <tr>
-                              <td>Havana</td>
-                              <td>Engenho Anísio Santiago</td>
-                              <td>25</td>
-                              <td>5%</td>
-                           </tr>
-                        </tbody>
-                     </table>
                      <div className="botao-container">
-                        <Botao texto="Clique Aqui" onClick={() => alert('Ôpaa, está funcionando!')} />
+                        <Botao texto="Clique Aqui" onClick={() => this.exibirTabela()} />
                      </div>
-                     <div className="rodape">
-                        <Rodape id='rodape' />
-                     </div>
+                     {
+                        this.state.tabelaVisivel && (
+                        <table id="tabela" border="1">
+                           <thead>
+                              <tr>
+                                 <th>Nome</th>
+                                 <th>Marca</th>
+                                 <th>IBU</th>
+                                 <th>Teor alcoólico</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>Havana</td>
+                                 <td>Engenho Anísio Santiago</td>
+                                 <td>25</td>
+                                 <td>5%</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        )
+                     }
+                     <div className="rodape"><Rodape id='rodape' /></div>
                   </div> 
                );
             }
          }
-         ReactDOM.render(<TabelaBebidas titulo="Tabela de Bebidas" />, document.getElementById("app"));
 
+         ReactDOM.render(<TabelaBebidas titulo="Tabela de Bebidas" />, document.getElementById("app"));
       </script>
    </body>
 </html>

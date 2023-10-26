@@ -1,15 +1,17 @@
 {
-  "name": "next0",
+  "name": "pweb",
   "version": "1.0.0",
-  "description": "",
+  "description": "Disciplina de programação web",
   "main": "index.js",
   "scripts": {
+    "dev": "next dev",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^13.5.6"
+    "next": "^13.4.19"
   }
 }

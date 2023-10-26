@@ -1,0 +1,29 @@
+.body {
+    text-align: center;
+    padding: 20px;
+    background-color: #0f5da2;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#titulo {
+    text-align: center;
+    font-size: 36px; 
+    color: #f0e6e6; 
+    margin-top: 20px; 
+}
+
+#about {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+#user {
+    font-style: italic;
+    color: #888;
+    margin-top: 10px;
+}
+  

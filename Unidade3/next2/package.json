@@ -2,7 +2,7 @@
   "name": "pweb",
   "version": "1.0.0",
   "description": "Disciplina de programação web",
-  "main": "index.js",
+  "main": "novaPagina.js",
   "scripts": {
     "dev": "next dev",
     "test": "echo \"Error: no test specified\" && exit 1"

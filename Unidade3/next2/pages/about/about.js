@@ -1,14 +1,12 @@
-import React from 'react';
-
-function About() {
+export function About() {
   return (
     <div>
         <h1>
-            Sobre este programa:
+            Sobre esta empresa de assistência:
         </h1>
-        <p>Esta é a minha primeira tentativa de criar um programa em Next.js que possui paginações com diferentes componentes.</p>
+        <p className={styles.paragrafoAbout}>
+            Nós prestamos assistência na escolha de um BOM repertório musical.
+        </p>
     </div>
   );
 }
-
-export default About;

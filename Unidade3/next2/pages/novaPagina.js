@@ -1,14 +1,18 @@
-import { Contact } from "./user/contact";
 import { About } from "./about/about";
-import { Navbar } from "./elements/navBar";
+import { Contact } from "./user/contact";
 import { Footer } from "./elements/footer";
+import { Button } from "./elements/button";
+import { IconUser } from "./elements/icons";
+import styles from "./styles/novaPagina.modules.css";
 
 export default function Main(){
     return (
         <div>
-            <Navbar />
-            <h1>
-                Nova Página
+            <Link href="elements/icons">
+                <IconUser />
+            </Link>
+            <h1 className={styles.titleMain}>
+                Contrate os nossos serviços de assistência!
             </h1>
         </div>
     )

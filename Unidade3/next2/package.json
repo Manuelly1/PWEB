@@ -1,5 +1,5 @@
 {
-  "name": "pweb",
+  "name": "next2",
   "version": "1.0.0",
   "description": "Disciplina de programação web",
   "main": "novaPagina.js",
@@ -12,6 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^13.4.19"
+    "next": "^14.0.1"
   }
 }

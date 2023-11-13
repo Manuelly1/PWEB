@@ -1,7 +1,4 @@
-import Link from 'next/link';
-import Button from '../elements/button';
-
-export default function Contact() {
+export function Contact() {
   return (
     <div>
       <h1>Entre em contato!</h1>

@@ -1,0 +1,14 @@
+/* styles.module.css (ou o nome do seu arquivo de estilos) */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 10px;
+}

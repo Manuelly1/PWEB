@@ -1,10 +1,9 @@
-import Link from 'next/link';
+import styles from "../styles/Footer.module.css";
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer>
-      <p className={styles.footer}>&copy; 2023 - Receita Next2 da disciplina de Pweb.</p>
-      <p>Entre em contato: manuelly.rodrigues.705@ufrn.edu.br</p>
+      <p className={styles.footer}>&copy; 2023 - Responsável por fornecer a melhor assistência da região.</p>
     </footer>
   );
 }

@@ -1,0 +1,14 @@
+.divMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh; /* Opcional: altura total da viewport para centralizar verticalmente */
+}
+
+.titleMain {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+

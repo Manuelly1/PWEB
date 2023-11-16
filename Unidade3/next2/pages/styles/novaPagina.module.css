@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 50vh; /* Opcional: altura total da viewport para centralizar verticalmente */
+    height: 50vh; 
 }
 
 .titleMain {

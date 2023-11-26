@@ -5,7 +5,7 @@
     place-items: center;
     min-height: 100vh;
 }
-  
+
 .searchContainer {
     margin-bottom: 20px;
 }
@@ -16,6 +16,7 @@
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    width: 60%; 
 }
 
 .buttonSearch {
@@ -27,7 +28,7 @@
     border: none;
     border-radius: 4px;
 }
-  
+
 .buttonSearch:hover {
     background-color: #45a049;
 }
@@ -35,6 +36,7 @@
 .movieContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around; 
 }
 
 .movieCard {
@@ -45,8 +47,13 @@
     text-align: center;
     background-color: #f9f9f9;
     border-radius: 4px;
+    transition: transform 0.3s;
 }
-  
+
+.movieCard:hover {
+    transform: scale(1.05);
+}
+
 .movieTitle {
     font-size: 18px;
     margin-bottom: 8px;
@@ -64,4 +71,3 @@
     margin-top: 10px;
     border-radius: 4px;
 }
-  

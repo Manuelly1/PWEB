@@ -1,4 +1,3 @@
-import Head from "next/head";
 import JsonObjects from "../components/jsonObjects";
 import styles from "../styles/application.module.css";
 

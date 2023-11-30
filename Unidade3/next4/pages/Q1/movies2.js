@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import useSWR from "swr";
-import styles from "../styles/movies2.module.css";
+import styles from "../../styles/movies2.module.css";
 
 export default function Movies2(){
     const {data, error} = useSWR(`http://www.omdbapi.com/?apikey=a1705ee9&s=bagdad`, fetcher)    
@@ -9,7 +9,6 @@ export default function Movies2(){
     if (!data) return <div>carregando...</div>
 
     return (
-
         <div>
             { data.Search.map( (m) => <MovieLink key={m.imdbID} movie2={m}/> )};
         </div>

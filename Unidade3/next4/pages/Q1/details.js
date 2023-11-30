@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import useSWR from "swr";
-import styles from "../styles/details.module.css";
+import styles from "../../styles/details.module.css";
 
 const fetcher = async (url) => {
     const res = await fetch(url);

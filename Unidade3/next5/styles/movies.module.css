@@ -1,0 +1,42 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(241, 205, 205);
+}
+  
+.forms {
+    margin-top: 20px;
+}
+  
+.searchButton {
+    background-color: #ee00ff;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+  
+.moviesContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+  
+.movieCard {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+}
+  
+.movieCard a {
+    text-decoration: none;
+    color: #333;
+}
+  
+.movieText {
+    margin-top: 10px;
+    font-size: 14px;
+}
+  

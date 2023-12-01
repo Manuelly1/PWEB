@@ -1,0 +1,19 @@
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f78a69;
+}
+  
+.title {
+    color: #100e0e;
+    text-align: center;
+}
+  
+.ipInfo {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #9b5353;
+    border-radius: 5px;
+}
+  

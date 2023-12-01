@@ -1,0 +1,36 @@
+.divPage {
+    background-color: #f78a69; 
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    text-align: center;
+    font-weight: 900;
+    transition: font-size 0.3s ease;
+}
+
+.divPage:hover {
+    font-size: large;
+}
+
+.divMovies {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;    
+    width: 100%; 
+    background-color: #f78a69; 
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.divMovies p {
+    margin: 0;
+    font-size: 25px;
+    color: #010101; 
+    margin-bottom: 10px; 
+}
+
